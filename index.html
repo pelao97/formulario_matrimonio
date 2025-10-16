@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrimonio Juan Pablo y Rosario</title>
+    <!-- Carga Tailwind CSS para un diseño responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga la fuente Barlow -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Configuración del body sin fondo */
+        body {
+            font-family: 'Barlow', sans-serif; 
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centrado vertical y horizontal */
+            min-height: 100vh;
+            margin: 0; 
+        }
+
+        /* Estilo para el contenedor principal con fondo de LeBron */
+        .card-container {
+            max-width: 400px; /* Ancho optimizado para móvil */
+            width: 90%;
+            background-image: url('fotos/lebron.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+            border-radius: 2rem; 
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Overlay semitransparente para mejor legibilidad */
+        .card-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 2rem;
+            z-index: 1;
+        }
+
+        /* Contenido del formulario */
+        .form-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Estilo para la imagen circular de Rose Pelao */
+        .couple-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            margin: 0 auto 2rem auto;
+            display: block;
+        }
+
+        /* Estilo específico para los botones, con bordes totalmente redondeados y altura ajustada */
+        .btn {
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.125rem;
+            border-radius: 50px; /* Bordes completamente redondeados */
+            transition: all 0.3s ease;
+            transform: scale(1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #1f4d38, #2d7a5f);
+            color: #ffffff;
+            border: 2px solid #1f4d38;
+            text-decoration: none;
+            display: block;
+            padding: 1.08rem 1rem; /* Disminuido 10% desde 1.2rem a 1.08rem */
+            min-height: 3.15rem; /* Altura mínima ajustada */
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #2d7a5f, #1f4d38);
+            transform: scale(1.02);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Responsive design para dispositivos móviles */
+        @media (max-width: 768px) {
+            .card-container {
+                max-width: 95%;
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+            
+            .couple-photo {
+                width: 150px;
+                height: 150px;
+            }
+            
+            h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            .btn {
+                padding: 0.945rem 0.875rem; /* Disminuido 10% desde 1.05rem a 0.945rem */
+                font-size: 1rem;
+                min-height: 2.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-container {
+                padding: 1rem;
+            }
+            
+            .couple-photo {
+                width: 130px;
+                height: 130px;
+            }
+            
+            h1 {
+                font-size: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="form-content">
+            <!-- Imagen circular de Rose Pelao -->
+            <img src="fotos/foto_rose_pelao.png" alt="Juan Pablo y Rosario" class="couple-photo">
+            
+            <!-- Título de la Invitación -->
+            <header class="text-center mb-8">
+                <h1 class="text-3xl font-extrabold text-gray-800 mb-2 tracking-wider">Matrimonio Juan Pablo y Rosario</h1>
+                <!-- Fecha del evento -->
+                <p class="text-lg text-gray-600">Los esperamos este 27 de diciembre de 2025</p>
+            </header>
+
+            <!-- Sección de Botones -->
+            <div class="space-y-3">
+                <!-- Botón 1: Confirma asistencia (Formulario de Google) -->
+                <a href="https://forms.gle/rgwnDVGXDTjGPMTFA" target="_blank" class="btn">
+                    Confirma asistencia
+                </a>
+
+                <!-- Botón 2: Lista Novios Falabella -->
+                <a href="https://novios.falabella.com/busqueda" target="_blank" class="btn">
+                    Lista Novios Falabella
+                </a>
+
+                <!-- Botón 3: Dirección Iglesia Carampangue (Google Maps) -->
+                <a href="https://www.google.com/maps/dir//Av.+Balmaceda+270,+Talagante,+Regi%C3%B3n+Metropolitana/@-33.6507236,-70.9718432,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9662e174b15ddb71:0x5efe1736c7bd2f5c!2m2!1d-70.8894412!2d-33.6507516?entry=ttu&g_ep=EgoyMDI1MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn">
+                    Dirección Iglesia Carampangue
+                </a>
+
+                <!-- Botón 4: Dirección Viña Undurraga (Google Maps) -->
+                <a href="https://www.google.com/maps/search/Vi%C3%B1a+Undurraga+Camino+a+Melipilla+km+34,+Talagante" target="_blank" class="btn">
+                    Dirección Viña Undurraga
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
